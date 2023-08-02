@@ -1,0 +1,340 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+    padding: 0px;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    min-height: 100vh;
+    position: relative;
+    --cor-paragrafo: #999;
+    --cor-branca: #fff;
+    --cor-preto: #000;
+    --cor-cinza: #999;
+    --cor-cinza-escuro: #666;
+    --cor-fundo-navbar: #161616;
+    --cor-icon-tags: #5e2fa8;
+    --cor-icon-contato: #976cdc;
+}
+main{
+    margin-bottom: 250px;
+}
+.negrito{
+    font-weight: 700;
+}
+
+/* ============================= Navbar =============================*/
+#logo{
+    position: absolute;
+    top: 10px;
+    left: 9.5%;
+}
+
+#logo img{
+    width: 50px;
+}
+
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cor-fundo-navbar) ;
+    padding: 20px;
+    text-transform: uppercase;
+    list-style: none;
+}
+
+.desktop {
+    display: flex;
+}
+.mobile {
+    display: none;
+}
+#navbar li{
+    margin: 0 10px;
+    padding: 5px;
+
+}
+#navbar .navLink{
+    color: var(--cor-branca);
+    text-decoration: none;
+    transition: .5s;
+    font-size: 20px;
+}
+
+#navbar .navLink:hover{
+    color: var(--cor-paragrafo);
+    
+}
+
+/* Footer */
+
+footer{
+    width: 100%;
+    position: absolute ;
+    bottom: 0;
+    text-align: center;
+    background-color: var(--cor-preto);
+    color: var(--cor-branca);
+    padding: 50px 0 ;
+}
+
+/*============================= HOME =============================*/
+#titleContainer, #contato{
+    min-width: 500px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+#titleContainer h1{
+    font-size: 50px;
+}
+#titleContainer p{
+    text-transform: uppercase;
+    margin-top: 10px;
+    color: var(--cor-paragrafo);
+}
+
+
+#postsContainer{
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.postBox:first-child{
+    min-width: 100%;  
+}
+.postBox{
+    flex: 1 1 0;
+    margin-bottom: 30px;
+}
+.postBox:nth-child(3){
+   margin: 0 1%;
+}
+.postBox img{
+    width: 100%;
+}
+.postBox .postTitle{
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.postBox .postTitle a{
+    color: var(--cor-preto);
+    transition: .5s;
+}
+.postBox .postTitle a:hover{
+    color: var(--cor-cinza);
+}
+.postBox .postDesc{
+    color: var(--cor-cinza-escuro);
+}
+
+.tagsContainer{
+    margin-top: 10px;
+}
+
+.tagsContainer a, #tagList li a, #categoriesList li a{
+    transition: .3s;
+    text-transform: capitalize;    
+    display: inline-block;
+    height: 24px;
+    line-height: 24px;
+    position: relative;
+    margin: 0 16px 8px 0;
+    padding: 0 10px 0 12px;
+    background: var(--cor-icon-tags);    
+    -webkit-border-bottom-right-radius: 3px;    
+    border-bottom-right-radius: 3px;
+    -webkit-border-top-right-radius: 3px;    
+    border-top-right-radius: 3px;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    color: var(--cor-branca);
+    font-size: 12px;
+    font-family: "Lucida Grande","Lucida Sans Unicode",Verdana,sans-serif;
+    text-decoration: none;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    font-weight: bold;
+    }
+    .tagsContainer a:before, #tagList li a:before, #categoriesList li a:before {
+        content: "";
+        position: absolute;
+        top:0;
+        left: -12px;
+        width: 0;
+        height: 0;
+        border-color: transparent var(--cor-icon-tags) transparent transparent;
+        border-style: solid;
+        border-width: 12px 12px 12px 0;        
+        }
+    
+    .tagsContainer a:after, #tagList li a:after, #categoriesList li a:after {
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: 1px;
+        float: left;
+        width: 5px;
+        height: 5px;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        background: var(--cor-branca);
+        -webkit-box-shadow: -1px -1px 2px rgba(0,0,0,0.4);
+        box-shadow: -1px -1px 2px rgba(0,0,0,0.4);
+        }
+    .tagsContainer a:hover, #tagList li a:hover, #categoriesList li a:hover{
+        background-color: #7c4fc4;
+    }
+    
+
+
+/*============================= Posts ============================= */
+
+#postContainer{
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-template-rows: auto;
+    grid-template-areas: "main sidebar";
+    grid-gap: 10px;
+    padding-top: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 250px;
+
+}
+.contentContainer{
+    grid-area: main;
+}
+#mainTitle{
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+#postDesc{
+    font-style: italic;
+    margin-bottom: 40px;
+}
+.postContent{
+    line-height: 1.8;
+    margin: 10px 0;
+}
+.imgContainer{
+    margin-bottom: 30px;
+}
+.imgContainer img{
+    width: 60%;
+}
+
+.navContainer{
+    grid-area: sidebar;
+}
+#tagsTitle, #categiriesTitle{
+    font-size: 24px;
+    margin-bottom: 10px;
+    background-color: var(--cor-preto);
+    color: var(--cor-branca);
+    text-align: center;
+    padding: 10px;
+    font-weight: 300px;
+}
+#tagList li, #categoriesList li {
+    list-style: none;
+    margin-left: 10px;
+
+}
+#tagList li:last-child, #categoriesList li:last-child {
+    margin-bottom: 40px;
+
+}
+
+/*============================= Contato ============================= */
+
+#contato{
+    max-width: 1200px;
+    margin: 150px auto;
+    margin-top: 30px;
+}
+#contato img{
+   width: 550px;
+}
+#contatoNumber ul{
+    list-style: none;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+#contatoNumber ul i{
+    font-size: 21px;
+    color: var(--cor-icon-contato);
+}
+#contato p{
+    font-size: 16px;
+ }
+
+
+/*============================= Mobile ============================= */
+
+@media (max-width: 480px){
+
+    /* HOME */
+  header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cor-fundo-navbar);
+  }
+
+  #logo {
+    width: 100%;
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    left: 0;
+    width: 50px;
+  }
+ 
+   .mobile{
+    transition: .5s;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .desktop {
+    transition: .5s;
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+}
+ 
+  #navbar .navLink{
+    font-size: 17px;
+  }
+  #titleContainer {
+    min-width: 100%;
+    margin-top: 20px;
+  }
+
+  #postsContainer {
+    margin-top: 20px;
+  }
+
+  .postBox {
+    flex: 100% 1 0;
+    padding: 15px;
+    margin: 0;
+  }
+
+  /* POST */
+  #postContainer {
+    grid-template-columns: 100%;
+    padding: 15px;
+    grid-template-areas: "main"
+    "sidebar";
+  }
+
+  .imgContainer img {
+    width: 100%;
+  }
+
+}
