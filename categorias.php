@@ -6,6 +6,7 @@
 
     <?php foreach($categories as $categoria): ?>
             <li><a href="#"><?= $categoria ?></a></li>
+            <p>Teste</p>
     <?php endforeach; ?>
     </div>
 
