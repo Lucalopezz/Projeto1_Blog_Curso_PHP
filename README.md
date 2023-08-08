@@ -21,7 +21,7 @@ O objetivo principal deste projeto foi aplicar os conceitos aprendidos durante o
 
 ## Como Visualizar o Blog
 
-1. Clone este repositório para sua máquina local usando o seguinte comando:
+1. Clone este repositório para sua máquina local usando o seguinte comando: <br/>
 git clone https://github.com/seu-usuario/Projeto1_Blog_Curso_PHP.git
 
 2. Certifique-se de ter um ambiente de desenvolvimento PHP configurado em sua máquina.
