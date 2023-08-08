@@ -29,10 +29,10 @@ git clone https://github.com/seu-usuario/Projeto1_Blog_Curso_PHP.git
 3. Navegue até o diretório do projeto:
 cd Projeto1_Blog_Curso_PHP
 
-4. Execute o servidor local (por exemplo, usando PHP's built-in server):
+4. Execute o servidor local (por exemplo, usando PHP's built-in server): <br/>
 php -S localhost:5000
 
-5. Abra seu navegador e acesse `http://localhost:8000` para explorar o blog de linguagens de programação.
+5. Abra seu navegador e acesse `http://localhost:5000` para explorar o blog de linguagens de programação.
 
 
 
